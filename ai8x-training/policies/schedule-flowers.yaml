@@ -1,0 +1,13 @@
+---
+lr_schedulers:
+  training_lr:
+    class: MultiStepLR
+    milestones: [5, 8]  # Adjust milestones for 10-epoch training
+    gamma: 0.5          # Learning rate reduces by 50% at each milestone
+
+policies:
+  - lr_scheduler:
+      instance_name: training_lr
+    starting_epoch: 0
+    ending_epoch: 10  # Align with your total epochs
+    frequency: 1

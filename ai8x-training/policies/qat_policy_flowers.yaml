@@ -1,0 +1,4 @@
+---
+start_epoch: 5  # Start QAT after 5 epochs (adjust for your shorter training plan)
+weight_bits: 8  # Leave as 8-bit quantization
+shift_quantile: 1.0
